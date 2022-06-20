@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "ES6",
     "lib": [
-      "DOM", "DOM.Iterable", "ESNext"
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
     ],
     "esModuleInterop": true,
     "module": "ESNext",
@@ -13,7 +15,9 @@
     "rootDir": "src",
     "baseUrl": "src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": [
+        "*"
+      ]
     },
     "allowJs": true,
     "resolveJsonModule": true,
