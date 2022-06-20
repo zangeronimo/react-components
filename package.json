@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "local:base": "webpack-dev-server --config webpack.local.js",
     "prepare": "husky install",
-    "start": "webpack-dev-server --config webpack.local.js --stats-error-details --open",
+    "start": "yarn local:base --stats-error-details --open",
     "build": "webpack --config webpack.prod.js",
-    "jest": "jest",
+    "test": "jest",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --passWithNoTests --no-cache --runInBand",
     "test:ci": "yarn test --passWithNoTests --no-cache --runInBand --coverage",

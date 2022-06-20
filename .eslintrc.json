@@ -31,7 +31,7 @@
     "react-hooks/rules-of-hooks": "error",
     "no-useless-constructor": "off",
     "react-hooks/exhaustive-deps": "off",
-    "@typescript-eslint/no-explicit-anh": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "react/jsx-filename-extension": [
       1,
       {
