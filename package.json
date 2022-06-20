@@ -12,7 +12,7 @@
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --passWithNoTests --no-cache --runInBand",
     "test:ci": "yarn test --passWithNoTests --no-cache --runInBand --coverage",
-    "list": "eslint .",
+    "lint": "eslint .",
     "lint:fix": "yarn lint --fix"
   },
   "repository": {
@@ -53,6 +53,7 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",

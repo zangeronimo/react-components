@@ -6,7 +6,7 @@
   "extends": [
     "plugin:react/recommended",
     "standard",
-    "plugin-react/jsx-runtime",
+    "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:sonarjs/recommended"
