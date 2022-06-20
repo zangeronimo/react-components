@@ -13,6 +13,6 @@ module.exports = {
     '@/(.*)': '<rootDir>/src/$1',
     '\\.scss$': 'identity-obj-proxy'
   },
-  setupFilesAfterEnv: ['<rootDir>/src/setupTest.ts'],
-  modulePathIgnorePatters: ['<rootDir\>/src/stories/*'],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  // modulePathIgnorePatters: ['<rootDir\>/src/stories/*'],
 }
