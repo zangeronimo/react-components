@@ -1,0 +1,153 @@
+@import '@/styles/colors.scss';
+
+button {
+  border: none;
+  color: $white;
+  font-size: 0.75rem;
+
+  border-radius: 2.5px;
+
+  cursor: pointer;
+
+  &:disabled {
+    filter: contrast(0.5);
+    cursor: inherit;
+    color: $black;
+  }
+}
+
+.full {
+  width: 100%;
+}
+
+.large {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.normal {
+  padding: 0.75rem;
+}
+.small {
+  padding: 0.5rem;
+  font-size: 0.70rem;
+}
+.mini {
+  padding: 0.25rem;
+  font-size: 0.70rem;
+}
+
+.primary {
+  background-color: $primary;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.8);
+  }
+}
+.secondary {
+  background-color: $secondary;
+  transition: background-color 0.2s;
+  color: $black;
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.8);
+  }
+}
+.success {
+  background-color: $success;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.8);
+  }
+}
+.info {
+  background-color: $info;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.8);
+  }
+}
+.warning {
+  background-color: $warning;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.8);
+  }
+}
+.danger {
+  background-color: $danger;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.8);
+  }
+}
+
+.outline_primary {
+  background: none;
+  border: 1px solid $primary;
+  color: $primary;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: $primary;
+    color: $white;
+  }
+}
+.outline_secondary {
+  background: none;
+  border: 1px solid $secondary;
+  color: $black;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: $secondary;
+  }
+}
+.outline_success {
+  background: none;
+  border: 1px solid $success;
+  color: $success;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: $success;
+    color: $white;
+  }
+}
+.outline_info {
+  background: none;
+  border: 1px solid $info;
+  color: $info;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: $info;
+    color: $white;
+  }
+}
+.outline_warning {
+  background: none;
+  border: 1px solid $warning;
+  color: $warning;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: $warning;
+    color: $white;
+  }
+}
+.outline_danger {
+  background: none;
+  border: 1px solid $danger;
+  color: $danger;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: $danger;
+    color: $white;
+  }
+}
