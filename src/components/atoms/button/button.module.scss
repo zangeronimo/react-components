@@ -10,9 +10,7 @@ button {
   cursor: pointer;
 
   &:disabled {
-    filter: contrast(0.5);
     cursor: inherit;
-    color: $black;
   }
 }
 
@@ -38,51 +36,69 @@ button {
 
 .primary {
   background-color: $primary;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     filter: brightness(0.8);
   }
+  &:disabled {
+    background-color: $primary-light;
+  }
 }
 .secondary {
   background-color: $secondary;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
   color: $black;
 
   &:hover:not(:disabled) {
     filter: brightness(0.8);
   }
+  &:disabled {
+    color: $black;
+  }
 }
 .success {
   background-color: $success;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     filter: brightness(0.8);
+  }
+  &:disabled {
+    background-color: $success-light;
   }
 }
 .info {
   background-color: $info;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     filter: brightness(0.8);
+  }
+  &:disabled {
+    background-color: $info-light;
   }
 }
 .warning {
   background-color: $warning;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     filter: brightness(0.8);
   }
+  &:disabled {
+    background-color: $warning-light;
+  }
 }
 .danger {
   background-color: $danger;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     filter: brightness(0.8);
+  }
+  &:disabled {
+    background-color: $danger-light;
   }
 }
 
@@ -90,64 +106,88 @@ button {
   background: none;
   border: 1px solid $primary;
   color: $primary;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     background-color: $primary;
     color: $white;
   }
+  &:disabled {
+    border-color: $primary-light;
+    color: $primary-light;
+  }
 }
 .outline_secondary {
   background: none;
-  border: 1px solid $secondary;
+  border: 1px solid $black;
   color: $black;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     background-color: $secondary;
+  }
+  &:disabled {
+    border-color: $secondary;
+    color: $secondary;
   }
 }
 .outline_success {
   background: none;
   border: 1px solid $success;
   color: $success;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     background-color: $success;
     color: $white;
+  }
+  &:disabled {
+    border-color: $success-light;
+    color: $success-light;
   }
 }
 .outline_info {
   background: none;
   border: 1px solid $info;
   color: $info;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     background-color: $info;
     color: $white;
+  }
+  &:disabled {
+    border-color: $info-light;
+    color: $info-light;
   }
 }
 .outline_warning {
   background: none;
   border: 1px solid $warning;
   color: $warning;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     background-color: $warning;
     color: $white;
+  }
+  &:disabled {
+    border-color: $warning-light;
+    color: $warning-light;
   }
 }
 .outline_danger {
   background: none;
   border: 1px solid $danger;
   color: $danger;
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 
   &:hover:not(:disabled) {
     background-color: $danger;
     color: $white;
+  }
+  &:disabled {
+    border-color: $danger-light;
+    color: $danger-light;
   }
 }
