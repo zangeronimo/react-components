@@ -1,0 +1,86 @@
+@import '@/styles/colors.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+
+  border-radius: 2.5px;
+
+  font-size: 0.75rem;
+  color: $black;
+
+  width: 100%;
+  max-width: 450px;
+
+  .title {
+    padding: 0.5rem;
+    border-bottom: 1px solid;
+    color: $white;
+
+    &.primary {
+      border-color: $primary;
+      background-color: $primary;
+    }
+
+    &.secondary {
+      background-color: $secondary-light;
+      border-color: $secondary;
+      color: $black;
+    }
+
+    &.success {
+      border-color: $success;
+      background-color: $success;
+    }
+
+    &.info {
+      border-color: $info;
+      background-color: $info;
+    }
+
+    &.warning {
+      border-color: $warning;
+      background-color: $warning;
+    }
+
+    &.danger {
+      border-color: $danger;
+      background-color: $danger;
+    }
+  }
+
+  .content {
+    padding: 1rem 0.5rem;
+  }
+
+  .footer {
+    border-top: 1px solid $secondary;
+    background-color: $secondary-light;
+    padding: 0.5rem;
+  }
+
+
+  &.primary {
+    border-color: $primary;
+  }
+  &.secondary {
+    border-color: $secondary;
+  }
+
+  &.success {
+    border-color: $success;
+  }
+
+  &.info {
+    border-color: $info;
+  }
+
+  &.warning {
+    border-color: $warning;
+  }
+
+  &.danger {
+    border-color: $danger;
+  }
+}

@@ -47,7 +47,9 @@ module.exports = {
       filename: 'remoteEntry.js',
       exposes: {
         './components/atoms/button': './src/components/atoms/button',
-        './components/atoms/button-group': './src/components/atoms/button-group',
+        './components/atoms/group': './src/components/atoms/group',
+
+        './components/atoms/panel': './src/components/atoms/panel',
       },
       shared: {
         ...deps,
