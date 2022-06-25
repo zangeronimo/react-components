@@ -7,6 +7,7 @@ type Props = {
   name?: string
   id?: string
   label?: string
+  placeholder?: string
   required?: boolean
 }
 
@@ -15,9 +16,16 @@ const makeSut = ({
   name = 'input',
   id = 'input',
   label = 'Label',
+  placeholder = '',
 }: Props) => {
   return render(
-    <Input name={name} label={label} required={required} data-testid={id} />,
+    <Input
+      name={name}
+      label={label}
+      placeholder={placeholder}
+      required={required}
+      data-testid={id}
+    />,
   )
 }
 
@@ -62,5 +70,15 @@ describe('Input', () => {
     fireEvent.click(label)
 
     expect(input.focus).toBeTruthy()
+  })
+  it('shoult be able to render and find a placehouder passed', () => {
+    const text = faker.random.word()
+    const { queryByTestId } = makeSut({
+      name: 'input',
+      placeholder: text,
+    })
+    const input = queryByTestId('input') as HTMLInputElement
+
+    expect(input.placeholder).toBe(text)
   })
 })
