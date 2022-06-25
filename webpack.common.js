@@ -1,4 +1,6 @@
 const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { ModuleFederationPlugin } = require("webpack").container
 const deps = require('./package.json').dependencies
@@ -7,6 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'main-bundle-[hash].js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'scss'],
@@ -39,6 +42,12 @@ module.exports = {
     }],
   },
   plugins: [
+    new CleanWebpackPlugin({
+      dangerouslyAllowCleanPatternsOutsideProject: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+    }),
     new MiniCssExtractPlugin({
       filename: 'main-bundle-[hash].css',
     }),
