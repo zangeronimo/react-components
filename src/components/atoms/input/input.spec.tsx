@@ -6,10 +6,19 @@ import Input from './'
 type Props = {
   name?: string
   id?: string
+  label?: string
+  required?: boolean
 }
 
-const makeSut = ({ name = 'input', id = 'input' }: Props) => {
-  return render(<Input name={name} data-testid={id} />)
+const makeSut = ({
+  required = false,
+  name = 'input',
+  id = 'input',
+  label = 'Label',
+}: Props) => {
+  return render(
+    <Input name={name} label={label} required={required} data-testid={id} />,
+  )
 }
 
 describe('Input', () => {
@@ -25,5 +34,33 @@ describe('Input', () => {
     fireEvent.change(input, { target: { value } })
 
     expect(input.value).toBe(value)
+  })
+  it('shout get label text', () => {
+    const text = faker.random.words(3)
+    const { queryByText } = makeSut({ label: text })
+    const label = queryByText(text)
+
+    expect(label).toBeTruthy()
+  })
+  it('shout get label text with * when required', () => {
+    const { queryByRole } = makeSut({
+      id: 'input',
+      label: 'Label',
+      required: true,
+    })
+    const label = queryByRole('textbox', { name: 'Label *' })
+    expect(label).toBeTruthy()
+  })
+  it('shout focus input when click to label', () => {
+    const { getByRole, queryByTestId } = makeSut({
+      id: 'input',
+      label: 'Label',
+    })
+    const input = queryByTestId('input') as HTMLInputElement
+    const label = getByRole('textbox', { name: 'Label' })
+
+    fireEvent.click(label)
+
+    expect(input.focus).toBeTruthy()
   })
 })

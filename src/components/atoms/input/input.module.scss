@@ -1,0 +1,26 @@
+@import '@/styles/colors.scss';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+
+  label {
+    color: $gray-700;
+    font-size: 0.875rem;
+  }
+
+  input {
+    border: 1px solid $gray-400;
+    color: $gray-600;
+    border-radius: 2.5px;
+    font-size: 0.875rem;
+    padding: 0.4rem 0.5rem;
+
+    &:focus {
+      border-color: $blue-100;
+      box-shadow: 0px 0px 2.5px 2.5px $blue-100;
+      outline: none;
+    }
+  }
+}
