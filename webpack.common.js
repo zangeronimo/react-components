@@ -43,7 +43,7 @@ module.exports = {
       filename: 'main-bundle-[hash].css',
     }),
     new ModuleFederationPlugin({
-      name: 'react_components',
+      name: 'tudolinux_react',
       filename: 'remoteEntry.js',
       exposes: {
         './components/atoms/button': './src/components/atoms/button',

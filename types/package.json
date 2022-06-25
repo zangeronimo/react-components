@@ -1,0 +1,20 @@
+{
+  "name": "@types/tudolinux_react",
+  "version": "1.0.0",
+  "description": "Types Package to TudoLinux React Components",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zangeronimo/react-components.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Luciano Zangeronimo",
+    "email": "zangeronimo@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zangeronimo/react-components/issues"
+  },
+  "homepage": "https://github.com/zangeronimo/react-components#readme"
+}

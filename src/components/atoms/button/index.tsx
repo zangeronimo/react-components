@@ -8,6 +8,7 @@ type Props = HTMLAttributes<HTMLButtonElement> & {
   outline?: boolean
   full?: boolean
   size?: Sizes
+  disabled?: boolean
   children: ReactNode
 }
 
@@ -15,6 +16,7 @@ const Button = ({
   skin = 'primary',
   outline = false,
   full = false,
+  disabled = false,
   size = 'normal',
   children,
   ...rest
@@ -22,7 +24,7 @@ const Button = ({
   const bg = outline ? `outline_${skin}` : skin
   const styles = `${Styles[bg]} ${Styles[size]} ${full ? Styles.full : ''}`
   return (
-    <button type="button" className={styles} {...rest}>
+    <button type="button" disabled={disabled} className={styles} {...rest}>
       {children}
     </button>
   )
