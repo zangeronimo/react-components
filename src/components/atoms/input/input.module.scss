@@ -1,14 +1,9 @@
 @import '@/styles/colors.scss';
 
-.content {
+.container {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
-
-  label {
-    color: $gray-700;
-    font-size: 0.875rem;
-  }
 
   input {
     border: 1px solid $gray-400;
@@ -16,6 +11,7 @@
     border-radius: 2.5px;
     font-size: 0.875rem;
     padding: 0.4rem 0.5rem;
+    background: $gray-100;
 
     &::placeholder {
       color: $gray-400;
