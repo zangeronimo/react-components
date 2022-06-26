@@ -1,0 +1,15 @@
+@import '@/styles/colors.scss';
+
+.container {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: $gray-200;
+  height: 2rem;
+
+  width: 100%;
+
+  border: 1px solid $gray-300;
+  padding: 1rem;
+}

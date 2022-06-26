@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
-import Nav from '.'
+import Footer from '.'
 
 const makeSut = () => {
-  return render(<Nav>nav</Nav>)
+  return render(<Footer>Footer</Footer>)
 }
 
-describe('Nav', () => {
+describe('Footer', () => {
   it('should be able to render', () => {
     const sut = makeSut()
 
