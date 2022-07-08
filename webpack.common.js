@@ -57,9 +57,15 @@ module.exports = {
       exposes: {
         './components/atoms/button': './src/components/atoms/button',
 
+        './components/atoms/container': './src/components/atoms/container',
+
+        './components/atoms/footer': './src/components/atoms/footer',
+
         './components/atoms/group': './src/components/atoms/group',
 
         './components/atoms/input': './src/components/atoms/input',
+
+        './components/atoms/nav': './src/components/atoms/nav',
 
         './components/atoms/panel': './src/components/atoms/panel',
 
